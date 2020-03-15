@@ -91,6 +91,10 @@ function processLastItem(/* CODE HERE */ stringList, callback) {
  */
 function processSum(/* CODE HERE */ num1, num2, callback) {
   /* CODE HERE */
+  // if ((num1 || num2) > 0) {
+  //   return num1 + num2; //`${callback(num1 + num2)} is a big number`;
+  // } else {
+  return callback(num1 + num2);
 }
 
 /**
@@ -297,7 +301,7 @@ function tallyUpDonations(/* CODE HERE */) {
  * 1. What is the difference between counter1 and counter2?
  
  * 2. Which of the two uses a closure? How can you tell?
- 
+
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
  *
  */
