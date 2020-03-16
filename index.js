@@ -401,8 +401,17 @@ function counter2() {
  * counter() // should return 0
  * etc
  */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(/* CODE HERE */ max) {
   /* CODE HERE */
+  let count = 0;
+  return function() {
+    if (count <= max) {
+      return count++;
+    } else {
+      count = 0;
+      return count++;
+    }
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
