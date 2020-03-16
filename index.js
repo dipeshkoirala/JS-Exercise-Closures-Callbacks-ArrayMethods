@@ -356,11 +356,43 @@ function tallyUpDonations(/* CODE HERE */ runners) {
  * Study the code for counter1 and counter2. Answer the questions below.
  *
  * 1. What is the difference between counter1 and counter2?
+ * 
+ * Ans: --------------> Prior To finding  the differene between counter1 and counter2 
+ *                    , I would like to describe what a closure is? --> A closure is an
+ *                      inner function that has access to the outer function's variables-
+ *                      scope chain. The scope has 3 scope chains
+ * 
+ *                      i. It has access to its own scope (ie var defined between {})
+ *                      ii. It has access to the outer function's variables
+ *                      iii. It has access to global variables.
+ * // counter1 code -- we created a closure by adding a function counter(){}
+ * inside the counterMaker(){} function.
+ * 
+function counterMaker() {
+  let count = 0;  //defined in the global scope
+  return function counter() {//// This inner function will return the UPDATED value of count
+    count++; //first checks for the variable within the scope{},
+    if not found then looks for the outside for and use the var.
+  };
+}
+------> Its not a closure  variable is defined in global scope
+// counter2 code
+let count = 0; //variable defined in global scope
+
+function counter2() {
+  return count++; //function scope if we invoke outside of this function what happens?
+}
+//if we invoke counter2(); ---> every time we get the counter2 value 0!!
+ * 
  
  * 2. Which of the two uses a closure? How can you tell?
+ Ans: -----------> I think the counter1 uses a closure because here  a function is defined
+                  within a function
+
 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
- *
+ *Ans: --------------> I think counter1 is useful when we need to reuse the function again in several 
+ places, may be.
  */
 
 // counter1 code
@@ -413,6 +445,8 @@ function counterMakerWithLimit(/* CODE HERE */ max) {
     }
   };
 }
+// the counter produced with counterMakerWithLimit resets itself after reaching maxValue:
+//      TypeError: counter is not a function
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
