@@ -322,8 +322,12 @@ function getRunnersByTShirtSize(/* CODE HERE */ runners, tShirtSize) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
  */
-function tallyUpDonations(/* CODE HERE */) {
+function tallyUpDonations(/* CODE HERE */ runners) {
   /* CODE HERE */
+  return runners.reduce((a, c) => (a += c.donation), 0);
+  // AssertionError: expected '[object Object]1481712882912726
+  // 12811062769192042521471722661482921022131379
+  // 612823419031525825110971730262212741011562912412622391155214107171' to equal 7043
 }
 
 /////////////// CLOSURES ///////////////
