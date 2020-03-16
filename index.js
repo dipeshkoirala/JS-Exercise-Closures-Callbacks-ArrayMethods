@@ -143,8 +143,13 @@ function processProduct(/* CODE HERE */ num1, num2, callback) {
  * should return 3.
  */
 
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(
+  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */ list,
+  callback
+) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+  let temp = list.filter((unique, i) => list.indexOf(unique) === i);
+  return callback(temp);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
