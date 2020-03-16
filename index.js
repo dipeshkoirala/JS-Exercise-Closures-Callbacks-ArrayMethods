@@ -211,8 +211,9 @@ function isItAnApple(/* code here */ strings) {
  *
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
  */
-function removeApple(/* code here */) {
+function removeApple(/* code here */ strings) {
   /* code here */
+  return strings.filter(string => string !== "apple");
 }
 
 /**
