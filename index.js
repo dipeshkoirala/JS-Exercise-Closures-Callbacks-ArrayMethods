@@ -231,8 +231,12 @@ function removeApple(/* code here */ strings) {
  *
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
  */
-function stringSmash(/* code here */) {
+function stringSmash(/* code here */ strings) {
   /* code here */
+  //I think I need to use reduce with arrow function
+  return strings.reduce(
+    (/*Lets give accumulation*/ a, /*current Value*/ c) => a + c
+  ); //yes
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
