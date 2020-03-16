@@ -254,8 +254,13 @@ function stringSmash(/* code here */ strings) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
  */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(/* CODE HERE */ runners) {
   //   /* CODE HERE */
+  const myArr = [];
+  runners.map(fulName =>
+    myArr.push(`${fulName.last_name}, ${fulName.first_name}`)
+  );
+  return myArr;
 }
 
 /**
