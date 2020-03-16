@@ -308,6 +308,7 @@ function firstNamesAllCaps(/* CODE HERE */ runners) {
  */
 function getRunnersByTShirtSize(/* CODE HERE */ runners, tShirtSize) {
   /* CODE HERE */
+  return runners.filter(shirtSize => shirtSize.shirt_size === tShirtSize);
 }
 
 /**
