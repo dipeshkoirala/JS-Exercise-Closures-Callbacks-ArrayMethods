@@ -152,6 +152,17 @@ function processDuplicateFree(
   return callback(temp);
 }
 
+//OR
+
+function processDuplicateFree(
+  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */ list,
+  callback
+) {
+  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+  const uniqueA = [...new Set(list)];
+  return callback(uniqueA);
+}
+
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /**
